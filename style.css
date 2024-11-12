@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #627aa0;
+}
+.wrapper{
+    width:65vmin ;
+    height:70vmin;
+    background: #293447;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-details{
+      color: #B8C6DC;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 20px 27px;
+      display: flex;
+      justify-content: space-between;
+}
+
+.play-board{
+    width: 100%;
+    height: 100%;
+    background: #141e30;
+    display: grid;
+    /* grid with 30 colums and 30 rows */
+    grid-template:repeat(30, 1fr) / repeat(30, 1fr) ;
+}
+
+.play-board .food{
+    background: #FF003D;
+}
+
+.play-board .head{
+    background: greenyellow;
+}
+.controls{
+    display: none;
+    justify-content: space-between;
+}
+ .controls p{
+    font-size: 20px;
+    color: rgb(151, 151, 197);
+    padding: 25px 0;
+    width: calc(100% / 4);
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid #fff;
+ }
+
+ @media screen and (max-width: 800px){
+    .wrapper{
+        width: 65vmin;
+        height: 100vmin;
+    }
+    .game-details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .controls{
+        display: flex;
+    }
+    .controls p{
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+ }
